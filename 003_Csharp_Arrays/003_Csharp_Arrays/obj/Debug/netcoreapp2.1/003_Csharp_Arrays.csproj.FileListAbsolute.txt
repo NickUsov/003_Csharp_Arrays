@@ -1,0 +1,11 @@
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\bin\Debug\netcoreapp2.1\003_Csharp_Arrays.deps.json
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\bin\Debug\netcoreapp2.1\003_Csharp_Arrays.runtimeconfig.json
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\bin\Debug\netcoreapp2.1\003_Csharp_Arrays.runtimeconfig.dev.json
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\bin\Debug\netcoreapp2.1\003_Csharp_Arrays.dll
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\bin\Debug\netcoreapp2.1\003_Csharp_Arrays.pdb
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\obj\Debug\netcoreapp2.1\003_Csharp_Arrays.csprojAssemblyReference.cache
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\obj\Debug\netcoreapp2.1\003_Csharp_Arrays.csproj.CoreCompileInputs.cache
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\obj\Debug\netcoreapp2.1\003_Csharp_Arrays.AssemblyInfoInputs.cache
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\obj\Debug\netcoreapp2.1\003_Csharp_Arrays.AssemblyInfo.cs
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\obj\Debug\netcoreapp2.1\003_Csharp_Arrays.dll
+C:\Users\Nick\source\repos\c_sharp\003_Csharp_Arrays\003_Csharp_Arrays\003_Csharp_Arrays\obj\Debug\netcoreapp2.1\003_Csharp_Arrays.pdb
