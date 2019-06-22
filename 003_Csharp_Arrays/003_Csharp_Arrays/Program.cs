@@ -38,16 +38,17 @@ namespace _003_Csharp_Arrays
             //матрицы. Найти в данных массивах общий максимальный элемент, минимальный элемент, общую сумму всех элементов, общее 
             //произведение всех элементов, сумму четных элементов массива А, сумму нечетных столбцов массива В.
             Console.WriteLine("2. задание");
-            max = 0; min = 0;
-            int[] a = new int[5];
-            int[,] b = new int[3, 4];
+            double max_ = 0, min_ = 0;
+            Random rnd_ = new Random();
+            double[] a = new double[5];
+            double[,] b = new double[3, 4];
             for (int i = 0; i < 5; i++)
-                a[i] = rnd.Next(20);
-            for (int i = 0; i < 3; i++)
-                for (int j = 0; j < 4; j++)
-                    b[i, j] = rnd.Next(20);
+                a[i] = rnd_.Next(25)/10.0;
+            for (var i = 0; i < 3; i++)
+                for (var j = 0; j < 4; j++)
+                    b[i, j] = rnd_.Next(25)/10.0;
             Console.WriteLine("Одномерный массив");
-            foreach (int x in a)
+            foreach (var x in a)
                 Console.Write(x + " ");
             Console.WriteLine();
             Console.WriteLine("Двумерный массив");
@@ -59,40 +60,40 @@ namespace _003_Csharp_Arrays
             }
             Array.Sort(a);
             Console.WriteLine("Сортировка");
-            foreach (int x in a)
+            foreach (var x in a)
                 Console.Write(x + " ");
             Console.WriteLine();
-            foreach (int x in a)
-                foreach (int y in b)
+            foreach (var x in a)
+                foreach (var y in b)
                     if (x == y)
-                        max = x;
-            Console.WriteLine("Общий максимум " + max);
+                        max_ = x;
+            Console.WriteLine("Общий максимум " + max_);
             Array.Reverse(a);
-            foreach (int x in a)
-                foreach (int y in b)
+            foreach (var x in a)
+                foreach (var y in b)
                     if (x == y)
-                        min = x;
-            Console.WriteLine("Общий минимум " + min);
-            sum = 0;
-            foreach (int x in a)
-                sum += x;
-            foreach (int x in b)
-                sum += x;
-            Console.WriteLine("Сумма " + sum);
-            mult = 1;
-            foreach (int x in a)
+                        min_ = x;
+            Console.WriteLine("Общий минимум " + min_);
+            double sum_ = 0;
+            foreach (var x in a)
+                sum_ += x;
+            foreach (var x in b)
+                sum_ += x;
+            Console.WriteLine("Сумма " + sum_);
+            double mul = 1;
+            foreach (var x in a)
                 if (x != 0)
-                    mult *= x;
-            foreach (int x in b)
+                    mul *= x;
+            foreach (var x in b)
                 if (x != 0)
-                    mult *= x;
-            Console.WriteLine("Произведение " + mult);
-            int sumP = 0;
+                    mul *= x;
+            Console.WriteLine("Произведение " + mul);
+            double sumP = 0;
             for (int i = 0; i < 5; i++)
                 if (i != 0 && i % 2 == 0)
                     sumP += a[i];
             Console.WriteLine("Сумма четных элементов 1-го массива " + sumP);
-            int sumB = 0;
+            double sumB = 0;
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 4; j++)
@@ -132,6 +133,51 @@ namespace _003_Csharp_Arrays
                 double avg = (double)sum / arr[i].Length;
                 Console.WriteLine("Средний бал по {0} предмету равен {1:F2} ", i + 1, avg);
             }
+
+
+            //4. Даны 2 массива размерности M и N соответственно. Необходимо переписать в третий массив общие элементы первых
+            //двух массивов без повторений.
+
+            Console.WriteLine("4. задание");
+            Console.WriteLine("Enter length of 1 array");
+            int arr1_length = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter length of 2 array");
+            int arr2_length = int.Parse(Console.ReadLine());
+            int[] arr1 = new int[arr1_length];
+            int[] arr2 = new int[arr2_length];
+            for (int i = 0; i < arr1_length; i++)
+            {
+                arr1[i] = rnd.Next(20);
+                Console.Write(arr1[i] + " ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < arr2_length; i++)
+            {
+                arr2[i] = rnd.Next(20);
+                Console.Write(arr2[i] + " ");
+            }
+            Console.WriteLine();
+            int[] arr3 = new int[0];
+            int c = 0;
+            for(int i=0;i<arr1_length;i++)
+            {
+                for(int j=0;j<arr2_length;j++)
+                {
+                    if(arr1[i]==arr2[j])
+                    {
+                        Array.Resize(ref arr3, arr3.Length + 1);
+                        arr3[c] = arr1[i];
+                        c++;
+                    }
+                }
+            }
+            int[] arr_res = arr3.Distinct().ToArray();
+            Console.WriteLine("Result:");
+            for (int i = 0; i < arr_res.Length; i++)
+                Console.Write(arr_res[i] + " ");
+            Console.WriteLine();
+
+            //5. 
         }
     }
 }
