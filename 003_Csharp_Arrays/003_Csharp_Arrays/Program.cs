@@ -177,7 +177,37 @@ namespace _003_Csharp_Arrays
                 Console.Write(arr_res[i] + " ");
             Console.WriteLine();
 
-            //5. 
+            //5. Дан двумерный массив размерностью 5х5, заполненный случайными числами из диапазона от -100 до 100. Определить 
+            //сумму элементов массива, расположенных между минимальным и максимальным элементами.
+
+            Console.WriteLine("5. задание");
+            int k = 0;
+            int[,] array = new int[5, 5];
+            int[] buf = new int[25];
+            for(int i=0;i<5;i++)
+            {
+                for(int j=0;j<5;j++)
+                {
+                    array[i, j] = rnd.Next(-100, 100);
+                    buf[k] = array[i, j];
+                    k++;
+                    Console.Write(array[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+            int _min = buf.Min();
+            int _max = buf.Max();
+            int index_min = Array.IndexOf(buf, _min);
+            int index_max = Array.LastIndexOf(buf, _max);
+            if (index_min > index_max)
+            {
+                index_max = Array.LastIndexOf(buf, _min);
+                index_min = Array.IndexOf(buf, _max);
+            }
+            int result = 0;
+            for (int i = index_min; i < index_max + 1; i++)
+                result += buf[i];
+            Console.WriteLine($"Sum all elements from {_min} to {_max} is {result}");
         }
     }
 }
